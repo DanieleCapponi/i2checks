@@ -30,4 +30,4 @@ for c in $checks; do
 
 done
 
-#rm -r ../i2checks
+rm -r ../i2checks
