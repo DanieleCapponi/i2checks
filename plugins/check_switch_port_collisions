@@ -9,6 +9,10 @@ if [[ $ip == '' || $comm == '' || $n_ports == '' ]]; then
     exit 1
 fi
 
+if [[ ! -f /usr/lib/nagios/plugins/check_netgear_switch ]]; then
+    echo "You must install, check_netgear_switch plugin first"
+    exit 1
+fi
 
 s_ports=$(/usr/lib/nagios/plugins/check_netgear_switch -h $ip -c $comm -s ports -n $n_ports | grep Up | cut -d " " -f2 | sort -n)
 
