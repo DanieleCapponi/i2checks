@@ -5,7 +5,7 @@ mdadm='/proc/mdstat'
 
 
 raid_devices=$(grep ^md -c $mdadm)                       # Quantità array raid
-raid_status=$(grep "\[.*_.*\]" $mdadm -c)                # Quantità array non efficenti
+raid_status=$(grep "\[.*_.*\]" $mdadm -c)                # Quantità array non efficienti
 raid_recover=$(grep recovery $mdadm | awk '{print $4}')  # In caso di recovery mode, salva la percentuale
 raid_resync=$(grep resync $mdadm | awk '{print $4}')     # In caso di sincronizzazione, salva la percentuale
 
