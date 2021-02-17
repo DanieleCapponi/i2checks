@@ -1,0 +1,4 @@
+#!/bin/bash
+
+/usr/lib/nagios/plugins/check_esxi_hardware -H [Host_IP] -U [esxi_user] -P [esxi_password]
+exit 0
